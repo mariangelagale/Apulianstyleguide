@@ -144,38 +144,12 @@
             position: relative;
         }
 
-        .olive-branch-realistic {
-            position: absolute;
-            width: 180px;
-            height: auto;
-            opacity: 0.3;
-            pointer-events: none;
-        }
-
-        .olive-top-right { top: 20px; right: 20px; transform: rotate(15deg); }
-        .olive-bottom-left { bottom: 20px; left: 20px; transform: scaleX(-1) rotate(160deg); }
-
-        .icon-gold {
-            width: 48px;
-            height: 48px;
-            fill: none;
-            stroke: var(--gold);
-            stroke-width: 1;
-            margin-bottom: 24px;
-        }
-
         .pumo-icon {
             width: 40px;
             height: 40px;
             fill: var(--gold);
             margin: 0 auto 20px;
             opacity: 0.7;
-        }
-
-        .card-experience {
-            border-left: 1px solid #eee;
-            padding-left: 40px;
-            padding-right: 20px;
         }
 
         .lang-switcher {
@@ -210,10 +184,27 @@
             border-color: var(--text-dark);
         }
 
+        .insta-link {
+            display: inline-block;
+            margin-top: 1.5rem;
+            color: var(--gold);
+            text-decoration: none;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            border-bottom: 1px solid var(--gold);
+            padding-bottom: 4px;
+            transition: all 0.3s ease;
+        }
+
+        .insta-link:hover {
+            color: var(--text-dark);
+            border-color: var(--text-dark);
+        }
+
         @media (max-width: 768px) {
             .price-new { font-size: 5rem; }
             .section-padding { padding: 80px 0; }
-            .olive-branch-realistic { width: 100px; }
             .luxury-title { font-size: 3rem; }
             .olive-frame { width: 140px; }
             .frame-left { left: -50px; }
@@ -266,7 +257,8 @@
             <p class="text-lg md:text-xl font-extralight mb-12 max-w-xl mx-auto italic opacity-80" data-i18n="hero-subtitle">
                 Hai una cena speciale a Ostuni stasera? <br>Dimenticato qualcosa? La tua boutique in camera è pronta per te.
             </p>
-            <a href="#booking" class="btn-cta" data-i18n="btn-book">Prenota Consulenza</a>
+            <!-- Invertito: Invia Messaggio è ora in alto -->
+            <a href="#booking" class="btn-cta" data-i18n="btn-book">Invia Messaggio</a>
             <p class="uppercase-tracking mt-12 text-[8px] opacity-60" data-i18n="hero-delivery">Consegna espressa 2-4h</p>
         </div>
     </header>
@@ -279,13 +271,14 @@
             </svg>
             <p class="uppercase-tracking text-gold mb-4" data-i18n="concept-tag">Luxury Concept</p>
             <h2 class="text-5xl md:text-6xl mb-12 gold-text" data-i18n="concept-title">La Tua Boutique <br><span class="italic serif">In Camera.</span></h2>
-            <p class="text-gray-500 text-xl font-light leading-relaxed mb-16 max-w-2xl mx-auto" data-i18n="concept-desc">
+            <p class="text-gray-500 text-xl font-light leading-relaxed mb-10 max-w-2xl mx-auto" data-i18n="concept-desc">
                 Offriamo un'esperienza di shopping curata direttamente nella tua suite. I nostri personal stylist selezionano per te i capi più raffinati della stagione, consegnandoli direttamente alla tua porta in Masseria.
             </p>
             <div class="py-10 border-t border-b border-gray-100">
-                <p class="text-xl italic font-light mb-6" data-i18n="partnership">
+                <p class="text-xl italic font-light" data-i18n="partnership">
                     In collaborazione esclusiva con la boutique <span class="serif font-bold">La Varese</span>.
                 </p>
+                <a href="https://www.instagram.com/la.varese?igsh=MTEzb3l5b2JlaGo5cg==" target="_blank" class="insta-link">Seguici su Instagram</a>
             </div>
         </div>
     </section>
@@ -305,9 +298,9 @@
                 Assicurati un look impeccabile senza dover uscire dalla tua suite.
             </p>
 
-            <!-- Pulsante WhatsApp aggiornato -->
+            <!-- Invertito: Prenota Consulenza è ora in basso (collegato a WhatsApp) -->
             <a href="#" id="whatsapp-link" class="btn-cta !text-black !border-black hover:!bg-black hover:!text-white" data-i18n="btn-wa">
-                Invia Messaggio
+                Prenota Consulenza
             </a>
             
             <div class="mt-16 opacity-40">
@@ -326,9 +319,15 @@
     </footer>
 
     <script>
+        // FORZA APERTURA DALL'ALTO
+        if ('scrollRestoration' in history) {
+            history.scrollRestoration = 'manual';
+        }
+        window.scrollTo(0, 0);
+
         // CONFIGURAZIONE WHATSAPP
         const WHATSAPP_CONFIG = {
-            number: "393331234567", // <-- SOSTITUISCI CON IL TUO NUMERO (Prefisso + Numero)
+            number: "393245515264", 
             message: "Buongiorno! Mi trovo in Masseria e vorrei richiedere una consulenza Personal Stylist In-Room."
         };
 
@@ -337,7 +336,7 @@
                 "hero-tag": "Style Guide Puglia",
                 "hero-title": "Il Tuo Outfit <br>Perfetto, Ora.",
                 "hero-subtitle": "Hai una cena speciale a Ostuni stasera? <br>Dimenticato qualcosa? La tua boutique in camera è pronta per te.",
-                "btn-book": "Prenota Consulenza",
+                "btn-book": "Invia Messaggio",
                 "hero-delivery": "Consegna espressa 2-4h",
                 "concept-tag": "Luxury Concept",
                 "concept-title": "La Tua Boutique <br><span class='italic serif'>In Camera.</span>",
@@ -345,8 +344,8 @@
                 "partnership": "In collaborazione esclusiva con la boutique <span class='serif font-bold'>La Varese</span>.",
                 "booking-tag": "Guest Concierge Selection",
                 "booking-title": "Personal Stylist <br><span class='italic serif'>In-Room</span>",
-                "booking-desc": "Assicurati un look impeccabile senza dover uscire dalla tua suite. Il nostro servizio è pensato per chi desidera il massimo dell'eleganza con il minimo sforzo.",
-                "btn-wa": "Invia Messaggio",
+                "booking-desc": "Assicurati un look impeccabile senza dover uscire dalla tua suite.",
+                "btn-wa": "Prenota Consulenza",
                 "booking-avail": "Disponibile 09:00 – 22:00",
                 "booking-ready": "Pronti in 2-4 ore"
             },
@@ -354,7 +353,7 @@
                 "hero-tag": "Style Guide Puglia",
                 "hero-title": "Your Perfect <br>Outfit, Now.",
                 "hero-subtitle": "Special dinner in Ostuni tonight? <br>Forgotten something? Your in-room boutique is ready for you.",
-                "btn-book": "Book Consultation",
+                "btn-book": "Send Message",
                 "hero-delivery": "Express delivery 2-4h",
                 "concept-tag": "Luxury Concept",
                 "concept-title": "Your In-Room <br><span class='italic serif'>Boutique.</span>",
@@ -363,7 +362,7 @@
                 "booking-tag": "Guest Concierge Selection",
                 "booking-title": "In-Room <br><span class='italic serif'>Personal Stylist</span>",
                 "booking-desc": "Ensure an impeccable look without leaving your suite.",
-                "btn-wa": "Send Message",
+                "btn-wa": "Book Consultation",
                 "booking-avail": "Available 09:00 AM – 10:00 PM",
                 "booking-ready": "Ready in 2-4 hours"
             },
@@ -371,7 +370,7 @@
                 "hero-tag": "Style Guide Puglia",
                 "hero-title": "Ihr Perfektes <br>Outfit, Jetzt.",
                 "hero-subtitle": "Spezielle Abendessen in Ostuni? Etwas vergessen? Ihre Boutique im Zimmer ist bereit.",
-                "btn-book": "Beratung Buchen",
+                "btn-book": "Nachricht Senden",
                 "hero-delivery": "Expresslieferung 2-4h",
                 "concept-tag": "Luxus-Konzept",
                 "concept-title": "Ihre Boutique <br><span class='italic serif'>im Zimmer.</span>",
@@ -380,7 +379,7 @@
                 "booking-tag": "Guest Concierge Selection",
                 "booking-title": "In-Room <br><span class='italic serif'>Personal Stylist</span>",
                 "booking-desc": "Sichern Sie sich einen tadellosen Look, ohne Ihre Suite zu verlassen.",
-                "btn-wa": "Nachricht Senden",
+                "btn-wa": "Beratung Buchen",
                 "booking-avail": "Verfügbar 09:00 – 22:00",
                 "booking-ready": "Bereit in 2-4 Stunden"
             },
@@ -388,16 +387,16 @@
                 "hero-tag": "Style Guide Puglia",
                 "hero-title": "Votre Tenue <br>Parfaite, Maintenant.",
                 "hero-subtitle": "Dîner spécial à Ostuni ? Oublié quelque chose ? Votre boutique en chambre est là.",
-                "btn-book": "Réserver",
+                "btn-book": "Envoyer un Message",
                 "hero-delivery": "Livraison express 2-4h",
                 "concept-tag": "Concept Luxe",
                 "concept-title": "Votre Boutique <br><span class='italic serif'>en Chambre.</span>",
                 "concept-desc": "Nous proposons une expérience de shopping personnalisée directement dans votre suite.",
-                "partnership": "En collaboration exclusive con la boutique <span class='serif font-bold'>La Varese</span>.",
+                "partnership": "En collaboration exclusive avec la boutique <span class='serif font-bold'>La Varese</span>.",
                 "booking-tag": "Guest Concierge Selection",
                 "booking-title": "Styliste Privé <br><span class='italic serif'>en Chambre</span>",
-                "booking-desc": "Assurez-vous un look impeccable sans quitter votre suite.",
-                "btn-wa": "Envoyer un Message",
+                "booking-desc": "Assurez-vous un look impeccabile sans quitter votre suite.",
+                "btn-wa": "Réserver",
                 "booking-avail": "Disponible 09:00 – 22:00",
                 "booking-ready": "Prêt en 2-4 heures"
             }
@@ -422,7 +421,10 @@
             link.href = `https://wa.me/${WHATSAPP_CONFIG.number}?text=${encodedMsg}`;
         }
 
-        window.onload = () => updateWhatsAppLink('it');
+        window.onload = () => {
+            window.scrollTo(0, 0);
+            updateWhatsAppLink('it');
+        };
 
         window.addEventListener('scroll', () => {
             const switcher = document.getElementById('langSwitcher');
