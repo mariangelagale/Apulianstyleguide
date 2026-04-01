@@ -257,7 +257,6 @@
             <p class="text-lg md:text-xl font-extralight mb-12 max-w-xl mx-auto italic opacity-80" data-i18n="hero-subtitle">
                 Hai una cena speciale a Ostuni stasera? <br>Dimenticato qualcosa? La tua boutique in camera è pronta per te.
             </p>
-            <!-- Invertito: Invia Messaggio è ora in alto -->
             <a href="#booking" class="btn-cta" data-i18n="btn-book">Invia Messaggio</a>
             <p class="uppercase-tracking mt-12 text-[8px] opacity-60" data-i18n="hero-delivery">Consegna espressa 2-4h</p>
         </div>
@@ -272,7 +271,7 @@
             <p class="uppercase-tracking text-gold mb-4" data-i18n="concept-tag">Luxury Concept</p>
             <h2 class="text-5xl md:text-6xl mb-12 gold-text" data-i18n="concept-title">La Tua Boutique <br><span class="italic serif">In Camera.</span></h2>
             <p class="text-gray-500 text-xl font-light leading-relaxed mb-10 max-w-2xl mx-auto" data-i18n="concept-desc">
-                Offriamo un'esperienza di shopping curata direttamente nella tua suite. I nostri personal stylist selezionano per te i capi più raffinati della stagione, consegnandoli direttamente alla tua porta in Masseria.
+                Offriamo un'esperienza di shopping curata direttamente nella tua suite. I nostri personal shopper selezionano per te i capi più raffinati della stagione, consegnandoli direttamente alla tua porta in Masseria.
             </p>
             <div class="py-10 border-t border-b border-gray-100">
                 <p class="text-xl italic font-light" data-i18n="partnership">
@@ -287,7 +286,7 @@
     <section id="booking" class="section-padding bg-white">
         <div class="max-w-3xl mx-auto px-6 text-center">
             <p class="uppercase-tracking text-gold mb-12" data-i18n="booking-tag">Guest Concierge Selection</p>
-            <h2 class="text-6xl md:text-7xl mb-16 gold-text" data-i18n="booking-title">Personal Stylist <br><span class="italic serif">In-Room</span></h2>
+            <h2 class="text-6xl md:text-7xl mb-16 gold-text" data-i18n="booking-title">Private <br><span class="italic serif">Personal Shopper</span></h2>
             
             <div class="flex items-center justify-center gap-6 mb-20">
                 <span class="price-new gold-text">€49</span>
@@ -298,7 +297,7 @@
                 Assicurati un look impeccabile senza dover uscire dalla tua suite.
             </p>
 
-            <!-- Invertito: Prenota Consulenza è ora in basso (collegato a WhatsApp) -->
+            <!-- Prenota Consulenza in basso -->
             <a href="#" id="whatsapp-link" class="btn-cta !text-black !border-black hover:!bg-black hover:!text-white" data-i18n="btn-wa">
                 Prenota Consulenza
             </a>
@@ -328,7 +327,7 @@
         // CONFIGURAZIONE WHATSAPP
         const WHATSAPP_CONFIG = {
             number: "393245515264", 
-            message: "Buongiorno! Mi trovo in Masseria e vorrei richiedere una consulenza Personal Stylist In-Room."
+            message: "Buongiorno! Mi trovo in Masseria e vorrei richiedere una consulenza Private Personal Shopper."
         };
 
         const translations = {
@@ -340,14 +339,15 @@
                 "hero-delivery": "Consegna espressa 2-4h",
                 "concept-tag": "Luxury Concept",
                 "concept-title": "La Tua Boutique <br><span class='italic serif'>In Camera.</span>",
-                "concept-desc": "Offriamo un'esperienza di shopping curata direttamente nella tua suite. I nostri personal stylist selezionano per te i capi più raffinati della stagione, consegnandoli direttamente alla tua porta in Masseria.",
+                "concept-desc": "Offriamo un'esperienza di shopping curata direttamente nella tua suite. I nostri personal shopper selezionano per te i capi più raffinati della stagione, consegnandoli direttamente alla tua porta in Masseria.",
                 "partnership": "In collaborazione esclusiva con la boutique <span class='serif font-bold'>La Varese</span>.",
                 "booking-tag": "Guest Concierge Selection",
-                "booking-title": "Personal Stylist <br><span class='italic serif'>In-Room</span>",
+                "booking-title": "Private <br><span class='italic serif'>Personal Shopper</span>",
                 "booking-desc": "Assicurati un look impeccabile senza dover uscire dalla tua suite.",
                 "btn-wa": "Prenota Consulenza",
                 "booking-avail": "Disponibile 09:00 – 22:00",
-                "booking-ready": "Pronti in 2-4 ore"
+                "booking-ready": "Pronti in 2-4 ore",
+                "wa_msg": "Buongiorno! Mi trovo in Masseria e vorrei richiedere una consulenza Private Personal Shopper."
             },
             en: {
                 "hero-tag": "Style Guide Puglia",
@@ -357,14 +357,15 @@
                 "hero-delivery": "Express delivery 2-4h",
                 "concept-tag": "Luxury Concept",
                 "concept-title": "Your In-Room <br><span class='italic serif'>Boutique.</span>",
-                "concept-desc": "We offer a curated shopping experience directly in your suite. Our personal stylists select the finest pieces for you.",
+                "concept-desc": "We offer a curated shopping experience directly in your suite. Our private personal shoppers select the finest pieces for you.",
                 "partnership": "In exclusive collaboration with <span class='serif font-bold'>La Varese</span> boutique.",
                 "booking-tag": "Guest Concierge Selection",
-                "booking-title": "In-Room <br><span class='italic serif'>Personal Stylist</span>",
+                "booking-title": "Private <br><span class='italic serif'>Personal Shopper</span>",
                 "booking-desc": "Ensure an impeccable look without leaving your suite.",
                 "btn-wa": "Book Consultation",
                 "booking-avail": "Available 09:00 AM – 10:00 PM",
-                "booking-ready": "Ready in 2-4 hours"
+                "booking-ready": "Ready in 2-4 hours",
+                "wa_msg": "Hello! I am at the Masseria and I would like to request a Private Personal Shopper consultation."
             },
             de: {
                 "hero-tag": "Style Guide Puglia",
@@ -374,14 +375,15 @@
                 "hero-delivery": "Expresslieferung 2-4h",
                 "concept-tag": "Luxus-Konzept",
                 "concept-title": "Ihre Boutique <br><span class='italic serif'>im Zimmer.</span>",
-                "concept-desc": "Wir bieten ein exklusives Einkaufserlebnis direkt in Ihrer Suite.",
+                "concept-desc": "Wir bieten ein exklusives Einkaufserlebnis direkt in Ihrer Suite. Unsere Personal Shopper wählen die besten Stücke für Sie aus.",
                 "partnership": "In exklusiver Zusammenarbeit mit der Boutique <span class='serif font-bold'>La Varese</span>.",
                 "booking-tag": "Guest Concierge Selection",
-                "booking-title": "In-Room <br><span class='italic serif'>Personal Stylist</span>",
+                "booking-title": "Private <br><span class='italic serif'>Personal Shopper</span>",
                 "booking-desc": "Sichern Sie sich einen tadellosen Look, ohne Ihre Suite zu verlassen.",
                 "btn-wa": "Beratung Buchen",
                 "booking-avail": "Verfügbar 09:00 – 22:00",
-                "booking-ready": "Bereit in 2-4 Stunden"
+                "booking-ready": "Bereit in 2-4 Stunden",
+                "wa_msg": "Guten Tag! Ich befinde mich in der Masseria und möchte eine Private Personal Shopper Beratung anfordern."
             },
             fr: {
                 "hero-tag": "Style Guide Puglia",
@@ -391,14 +393,15 @@
                 "hero-delivery": "Livraison express 2-4h",
                 "concept-tag": "Concept Luxe",
                 "concept-title": "Votre Boutique <br><span class='italic serif'>en Chambre.</span>",
-                "concept-desc": "Nous proposons une expérience de shopping personnalisée directement dans votre suite.",
+                "concept-desc": "Nous proposons une expérience de shopping personnalisée direttamente dans votre suite. Nos personal shoppers sélectionnent les meilleures pièces per voi.",
                 "partnership": "En collaboration exclusive avec la boutique <span class='serif font-bold'>La Varese</span>.",
                 "booking-tag": "Guest Concierge Selection",
-                "booking-title": "Styliste Privé <br><span class='italic serif'>en Chambre</span>",
+                "booking-title": "Private <br><span class='italic serif'>Personal Shopper</span>",
                 "booking-desc": "Assurez-vous un look impeccabile sans quitter votre suite.",
                 "btn-wa": "Réserver",
                 "booking-avail": "Disponible 09:00 – 22:00",
-                "booking-ready": "Prêt en 2-4 heures"
+                "booking-ready": "Prêt en 2-4 heures",
+                "wa_msg": "Bonjour ! Je suis à la Masseria et j'aimerais demander une consultation Private Personal Shopper."
             }
         };
 
@@ -417,7 +420,8 @@
 
         function updateWhatsAppLink(lang) {
             const link = document.getElementById('whatsapp-link');
-            const encodedMsg = encodeURIComponent(translations[lang]["message"] || WHATSAPP_CONFIG.message);
+            const message = translations[lang]["wa_msg"] || WHATSAPP_CONFIG.message;
+            const encodedMsg = encodeURIComponent(message);
             link.href = `https://wa.me/${WHATSAPP_CONFIG.number}?text=${encodedMsg}`;
         }
 
