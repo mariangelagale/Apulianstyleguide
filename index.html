@@ -54,21 +54,24 @@
             overflow: hidden;
         }
 
-        .video-container {
+        /* Foto al posto del video con filtri beige/bianco e trasparenza */
+        .image-container {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
             z-index: 0;
-            opacity: 0.9;
         }
 
-        .video-container video {
+        .image-container img {
             width: 100%; height: 100%; object-fit: cover;
+            /* Filtri per toni beige/sabbia e bianco in trasparenza */
+            filter: sepia(0.4) brightness(1.1) contrast(0.85) opacity(0.6);
         }
 
         .hero-overlay {
             position: absolute;
             top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(255, 255, 255, 0.4);
+            /* Gradient bianco per sfumare l'immagine verso il fondo pagina */
+            background: linear-gradient(to bottom, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.8) 100%);
             z-index: 1;
         }
 
@@ -196,7 +199,7 @@
 </head>
 <body class="antialiased">
 
-    <!-- Language Selector -->
+    <!-- Selettore Lingua -->
     <nav class="lang-switcher" id="langSwitcher">
         <button class="lang-btn active" onclick="switchLang('it')">IT</button>
         <button class="lang-btn" onclick="switchLang('en')">EN</button>
@@ -206,10 +209,9 @@
 
     <!-- HERO -->
     <header class="hero-section">
-        <div class="video-container">
-            <video autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1539109136881-3be0616acf4b?auto=format&fit=crop&q=80&w=1200">
-                <source src="https://assets.mixkit.co/videos/preview/mixkit-fashion-model-showing-luxury-dress-4112-large.mp4" type="video/mp4">
-            </video>
+        <div class="image-container">
+            <!-- La tua foto caricata -->
+            <img src="image.png" alt="Personal Stylist in Video Call">
         </div>
         <div class="hero-overlay"></div>
         
@@ -356,7 +358,7 @@
                 "hero-delivery": "Livraison express 2-4h",
                 "concept-tag": "Concept Luxe",
                 "concept-title": "Votre Boutique <br><span class='italic serif'>en Chambre.</span>",
-                "concept-desc": "Nous proposons une expérience de shopping personnalisée direttamente dans votre établissement. Nos personal shoppers sélectionnent les meilleures pièces per voi.",
+                "concept-desc": "Nous proposons une esperienza de shopping personnalisée direttamente dans votre établissement. Nos personal shoppers sélectionnent les meilleures pièces per voi.",
                 "partnership": "En collaboration exclusive avec la boutique <span class='serif font-bold'>La Varese</span>.",
                 "booking-tag": "Guest Concierge Selection",
                 "booking-title": "Private <br><span class='italic serif'>Personal Shopper</span>",
